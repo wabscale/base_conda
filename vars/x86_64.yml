@@ -1,7 +1,7 @@
 ---
 # defaults file for base_conda
 # Standards: 0.2
-lin_installer: 'https://repo.anaconda.com/miniconda/Miniconda3-py310_23.11.0-1-Linux-x86_64.sh'
+lin_installer: 'Miniconda3-py310_23.11.0-1-Linux-x86_64.sh'
 lin_conda_url: 'https://repo.anaconda.com/miniconda/{{ lin_installer }}'
 lin_conda_sha256: 'sha256:6581658486be8e700d77e24eccafba586a0fbafafadcf73d35ab13eaee4b80b1'
 ...
