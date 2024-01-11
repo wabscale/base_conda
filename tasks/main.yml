@@ -4,6 +4,10 @@
   include_vars: "{{ ansible_os_family }}.yml"
   tags: always
 
+- name: Set architecture specific variables
+  include_vars: "{{ ansible_machine }}.yml"
+  tags: always
+
 - name: Check presence of conda
   when: ansible_os_family != 'Windows'
   stat:

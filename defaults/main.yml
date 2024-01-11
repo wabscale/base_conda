@@ -1,7 +1,0 @@
----
-# defaults file for base_conda
-# Standards: 0.2
-lin_installer: 'Miniconda3-py38_4.9.2-Linux-x86_64.sh'
-lin_conda_url: 'https://repo.anaconda.com/miniconda/{{ lin_installer }}'
-lin_conda_sha256: 'sha256:1314b90489f154602fd794accfc90446111514a5a72fe1f71ab83e07de9504a7'
-...
