@@ -1,0 +1,12 @@
+FROM amazonlinux:2023
+MAINTAINER Bas Meijer <bas.meijer@me.com>
+
+RUN mkdir -p /tmp/ansible/roles/conda_envs
+RUN dnf install -y ansible && \
+    dnf clean all
+COPY ./files/hosts /etc/ansible/hosts
+ADD . /tmp/ansible/roles/base_conda
+COPY ./molecule/shared/converge.yml /tmp/ansible/
+RUN cd /tmp/ansible && ansible-playbook -e role_name=base_conda converge.yml
+ENV PATH /opt/conda/envs/env/bin:$PATH
+ENV LANG C.UTF-8
