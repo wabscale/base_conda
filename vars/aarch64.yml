@@ -2,7 +2,7 @@
 # defaults file for base_conda
 # Standards: 0.2
 miniconda_timeout_seconds: 120
-miniconda_installer: 'Miniconda3-py310_23.11.0-1-Linux-aarch64.sh'
-miniconda_installer_url: 'https://repo.anaconda.com/miniconda/{{ miniconda_installer }}'
-miniconda_conda_sha256: 'sha256:30b3f26fee441c5d70bd50ec06ea1acaa0e373ad30771165eada3f6bdf27766a'
+miniconda_installer_sh: 'Miniconda3-py310_23.11.0-1-Linux-aarch64.sh'
+miniconda_installer_url: 'https://repo.anaconda.com/miniconda/{{ miniconda_installer_sh }}'
+miniconda_checksum: 'sha256:30b3f26fee441c5d70bd50ec06ea1acaa0e373ad30771165eada3f6bdf27766a'
 ...

@@ -3,7 +3,7 @@
 # Standards: 0.2
 
 miniconda_timeout_seconds: 120
-miniconda_installer: 'Miniconda3-py310_23.11.0-1-Linux-x86_64.sh'
-miniconda_installer_url: 'https://repo.anaconda.com/miniconda/{{ miniconda_installer }}'
-miniconda_conda_sha256: 'sha256:6581658486be8e700d77e24eccafba586a0fbafafadcf73d35ab13eaee4b80b1'
+miniconda_installer_sh: 'Miniconda3-py310_23.11.0-1-Linux-x86_64.sh'
+miniconda_installer_url: 'https://repo.anaconda.com/miniconda/{{ miniconda_installer_sh }}'
+miniconda_checksum: 'sha256:6581658486be8e700d77e24eccafba586a0fbafafadcf73d35ab13eaee4b80b1'
 ...
