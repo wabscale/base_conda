@@ -1,10 +1,13 @@
 ARG AMAZONLINUX_RELEASE=2023
 FROM amazonlinux:${AMAZONLINUX_RELEASE}
-MAINTAINER Bas Meijer <bas.meijer@me.com>
+MAINTAINER John Cunniff <john.cunniff@voladynamics.com>
+
+SHELL ["/bin/bash", "-c"]
 
 RUN mkdir -p /tmp/ansible/roles/conda_envs
-RUN dnf install -y ansible gcc gcc-c++ && \
-    dnf clean all
+RUN set -eux; \
+    yum install -y ansible gcc gcc-c++; \
+    yum clean all;
 COPY ./files/hosts /etc/ansible/hosts
 ADD . /tmp/ansible/roles/base_conda
 COPY ./molecule/shared/converge.yml /tmp/ansible/
