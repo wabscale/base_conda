@@ -6,7 +6,8 @@ SHELL ["/bin/bash", "-c"]
 
 RUN mkdir -p /tmp/ansible/roles/conda_envs
 RUN set -eux; \
-    yum install -y ansible gcc gcc-c++; \
+    yum install -y python3 python3-pip gcc gcc-c++; \
+    pip3 install -U ansible; \
     yum clean all;
 COPY ./files/hosts /etc/ansible/hosts
 ADD . /tmp/ansible/roles/base_conda
